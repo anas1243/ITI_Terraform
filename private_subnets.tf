@@ -1,21 +1,21 @@
 # private subnet in az 1
 resource "aws_subnet" "ITI_private_subnet1" {
   vpc_id     = aws_vpc.ITI_vpc.id
-  cidr_block = "10.0.3.0/24"
-  availability_zone = "us-east-1a"
+  cidr_block = var.private_subnet1_cidr
+  availability_zone = "${var.region}a"
 
   tags = {
-    Name = "ITI_private_subnet1"
+    Name = var.private_subnet1_name
   }
 }
 # private subnet in az 2
 resource "aws_subnet" "ITI_private_subnet2" {
   vpc_id     = aws_vpc.ITI_vpc.id
-  cidr_block = "10.0.4.0/24"
-  availability_zone = "us-east-1b"
+  cidr_block = var.private_subnet2_cidr
+  availability_zone = "${var.region}b"
 
   tags = {
-    Name = "ITI_private_subnet2"
+    Name = var.private_subnet2_name
   }
 }
 
