@@ -1,5 +1,5 @@
 module "iti_network" {
-  source = "/media/anas/54a15ccf-a3f5-404f-973e-9896baea5de4/ITI/Terraform/TerraformLabs/network"
+  source = "./network"
     region = var.region
     vpc_name = var.vpc_name
     vpc_cidr = var.vpc_cidr
